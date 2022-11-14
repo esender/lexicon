@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import useSWR from 'swr'
+// @ts-ignore
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 const verbs = [
     {
@@ -41,7 +42,7 @@ type SelectButtonProps = {
 
 function SelectButton({ endings }: SelectButtonProps) {
   return <ButtonGroup isAttached>
-    {endings.map(end => <Button>{end}</Button>)}
+    {endings.map(end => <Button key={end}>{end}</Button>)}
   </ButtonGroup>
 }
 
