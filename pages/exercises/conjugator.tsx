@@ -56,6 +56,7 @@ function Conjugation({ type, correct, stem }: ConjugationProps) {
     () => shuffle(getExtraEndings(correctEnding)),
     [correctEnding]
   );
+  let pronoun = useMemo(() => sample(PRONOUNS[type]), [type]);
 
   let [answer, setAnswer] = useState<string>();
 
@@ -71,7 +72,7 @@ function Conjugation({ type, correct, stem }: ConjugationProps) {
 
   return (
     <Flex w="full" justifyContent="space-between">
-      <Box>{sample(PRONOUNS[type])}</Box>
+      <Box>{pronoun}</Box>
       <Box>
         <ButtonGroup>
           {endings.map((end) => (
@@ -97,14 +98,21 @@ function Conjugation({ type, correct, stem }: ConjugationProps) {
 type conjs = "s1" | "s2" | "s3" | "p1" | "p2" | "p3";
 
 function ConjugationTrainer({ word }: ConjugationTrainerProps) {
-  const { isError, isLoading, isSuccess, data: wordInfo } = useVerb(word);
+  const { isError, isSuccess, data: wordInfo } = useVerb(word);
 
   if (isError) return <div>failed to load</div>;
 
   return (
     <Box textAlign="center">
+      <Box mb={2}>
+        <Skeleton isLoaded={isSuccess} display="inline-block" minW={200}>
+          <Heading>{wordInfo?.infinitive ?? "something"}</Heading>
+        </Skeleton>
+      </Box>
       <Skeleton isLoaded={isSuccess} display="inline-block" minW={200}>
-        <Heading>{wordInfo?.infinitive ?? "something"}</Heading>
+        <Heading as="h3" size="md">
+          {wordInfo?.translation ?? "something"}
+        </Heading>
       </Skeleton>
       <br />
       <br />
