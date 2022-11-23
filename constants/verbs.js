@@ -4,1171 +4,1171 @@
 const verbs = [
   {
     infinitive: "sein",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "haben",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "können",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "werden",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "wissen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "wollen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "müssen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "machen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "tun",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "sagen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "gehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "sehen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "geben",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "sollen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "meinen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "kommen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "lassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "glauben",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "passieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "reden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "mögen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "hören",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "helfen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "finden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bleiben",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "brauchen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "lieben",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bringen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "stehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "heißen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "nehmen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "sprechen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "sterben",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "töten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bekommen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "vergessen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "halten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "warten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "kennen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verstehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "denken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "leben",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "stimmen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verlieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "dürfen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "arbeiten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "essen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "spielen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "liegen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "fahren",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "versuchen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erzählen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bedeuten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "fragen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bestimmen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "treffen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "hoffen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "suchen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verlassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "zeigen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "kriegen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "holen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "gefallen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "retten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "scheinen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schlafen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "lernen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "trinken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schaffen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "funktionieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "stellen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "nennen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "laufen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "fühlen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erinnern",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "kämpfen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "heiraten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erklären",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "sitzen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "tragen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "kaufen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "hassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "umbringen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "kümmern",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verletzen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "ziehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "anrufen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "aufhören",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "vorstellen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verschwinden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erwarten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "führen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "anfangen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "geschehen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "gewinnen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "klingen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "setzen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "benutzen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "fallen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "schicken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "fliegen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erfahren",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "bezahlen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schreiben",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schätzen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bitten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "lesen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "behalten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "verkaufen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verdienen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "wünschen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verheiraten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verdammen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "stecken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "passen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "schlagen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "verändern",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "folgen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "zerstören",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "entschuldigen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schießen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "beschützen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "stehlen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "bewegen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erwischen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "vertrauen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erreichen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "versprechen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "erledigen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "drehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schwören",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "aussehen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "verlieben",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verraten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "gebären",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "aufhalten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "dauern",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verstecken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "fangen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "beschäftigen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "tanzen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "fehlen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "öffnen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "entscheiden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "entfernen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "gehören",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "zahlen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "legen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erhalten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "sorgen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schauen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "lachen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "beweisen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "fürchten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "beginnen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "überraschen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "singen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "besorgen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "besuchen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "ändern",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "mitnehmen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "rufen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "leisten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "entkommen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "vermissen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "hängen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "werfen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "überleben",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "wetten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erkennen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "wohnen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "teilen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erschießen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "übernehmen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "danken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bauen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schützen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "beenden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verpassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "fassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "verhaften",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "unterhalten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "aufpassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "mitbringen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "melden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bestehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "planen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "betrinken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "brechen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "nachdenken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "ermorden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "leiden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "freuen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "aufgeben",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "verbringen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verfolgen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "bemerken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schließen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "weinen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "küssen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "behandeln",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "entdecken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "treten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "lauten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "hingehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "feuern",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "gebrauchen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verhindern",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erwähnen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erlauben",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "einladen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "angreifen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "zulassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "lügen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verlangen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "lösen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "vorbereiten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "überprüfen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "stören",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "kontrollieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "gelten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "zurückkommen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "hinterlassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "jagen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "enden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "irren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "merken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "abholen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "stoppen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schreien",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "klauen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "entführen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "überlegen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "reparieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "ausgehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "überzeugen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "erwachsen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "annehmen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "zählen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "vergeben",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "landen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "trennen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "verbinden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "springen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "fliehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "aufnehmen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "verursachen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "trauen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "klappen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "umgehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "wählen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "existieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "unternehmen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "befinden",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "weitermachen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "rauchen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "aufregen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "entlassen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "entwickeln",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "beobachten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "raten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "geraten",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "besprechen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "verbieten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "angehen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "kapieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "ertragen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "beeilen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "abhauen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "abschließen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "enttäuschen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schwimmen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "ergeben",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "bieten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "schmecken",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "riskieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "konzentrieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "übergeben",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "befreien",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "starten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "vernichten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "wahren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "spüren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "betreffen",
-    isRegular: false
+    type: "irregular"
   },
   {
     infinitive: "antworten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "ankommen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "begleiten",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "akzeptieren",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "steigen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "stammen",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "zuhören",
-    isRegular: true
+    type: "regular"
   },
   {
     infinitive: "begegnen",
-    isRegular: true
+    type: "regular"
   }
 ];
 

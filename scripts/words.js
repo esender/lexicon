@@ -27,7 +27,7 @@ function getConjugation(word, person, type) {
   return GermanVerbsLib.getConjugation(GERMAN_VERBS_DICT, word, 'PRASENS', person, type)[0];
 }
 
-function getConjufations(word) {
+function getConjugations(word) {
   return {
     s1: getConjugation(word, 1, 'S'),
     s2: getConjugation(word, 2, 'S'),
@@ -38,12 +38,16 @@ function getConjufations(word) {
   }
 }
 
+function isRegular(word, conjugations) {
+  return Object.values(conjugations).every(form => form.startsWith(getStem(word)))
+}
+
 const wordsList = verbs.map(({ word, translation }) => {
   try {
-    const conjugations = getConjufations(word);
+    const conjugations = getConjugations(word);
     return {
       infinitive: word,
-      isRegular: Object.values(conjugations).every(form => form.startsWith(getStem(word)))
+      type: isRegular(word, conjugations) ? "regular" : "irregular"
     }
   } catch(err) {}
 
@@ -52,13 +56,13 @@ const wordsList = verbs.map(({ word, translation }) => {
 
 const individualWords = verbs.map(({ word, translation }) => {
   try {
-    const conjugations = getConjufations(word)
+    const conjugations = getConjugations(word)
     return {
       infinitive: word,
       stem: getStem(word),
       translation,
       conjugations,
-      isRegular: Object.values(conjugations).every(form => form.startsWith(getStem(word)))
+      type: isRegular(word, conjugations) ? "regular" : "irregular"
     }  
   } catch(err) {
     // When can't get conjugation, just return null and ignore.

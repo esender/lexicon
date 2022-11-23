@@ -7,6 +7,8 @@ import {
   Flex,
   Stack,
   Skeleton,
+  Checkbox,
+  CheckboxGroup,
 } from "@chakra-ui/react";
 import React, { useCallback, useMemo, useState } from "react";
 import verbs from "../../constants/verbs";
@@ -142,14 +144,22 @@ function ConjugationTrainer({ word }: ConjugationTrainerProps) {
 
 type Verb = {
   infinitive: string;
-  isRegular: boolean;
+  type: "regular" | "irregular";
 };
 
 type TrainerProps = {
   verbs: Verb[];
 };
 const Trainer: React.FC<TrainerProps> = function ({ verbs }) {
-  const filteredWords = verbs.filter((word) => word.isRegular);
+  // How to handle this? Component might call onChange with string or number, but I know that there is only strings in my component
+  const [filters, setFilters] = React.useState<(string | number)[]>([
+    "regular",
+    "irregular",
+  ]);
+  const filteredWords = React.useMemo(
+    () => verbs.filter((verb) => filters.includes(verb.type)),
+    [verbs, filters]
+  );
   const [verb, setVerb] = React.useState<Verb>(getRandom(filteredWords));
 
   const resetVerb = useCallback(
@@ -167,9 +177,15 @@ const Trainer: React.FC<TrainerProps> = function ({ verbs }) {
 
       <Heading>Present Tense Regular Verbs Conjugation</Heading>
 
-      <button onClick={resetVerb}>Reset Word</button>
+      <CheckboxGroup onChange={setFilters} value={filters}>
+        <Stack spacing={5} direction="row">
+          <Checkbox value="regular">Regular</Checkbox>
+          <Checkbox value="irregular">Irregular</Checkbox>
+        </Stack>
+      </CheckboxGroup>
 
       {verb && <ConjugationTrainer word={verb.infinitive} />}
+      <Button onClick={resetVerb}>Random Word</Button>
     </div>
   );
 };
