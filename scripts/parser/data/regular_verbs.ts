@@ -1,72 +1,16 @@
 // List of German verbs with translation
 const VERBS = [
   {
-    word: "sein",
-    translation: "to be"
-  },
-  {
-    word: "haben",
-    translation: "to have; to contain"
-  },
-  {
-    word: "können",
-    translation: "can; to be able to"
-  },
-  {
-    word: "werden",
-    translation: "will; to be done (passive voice); to become"
-  },
-  {
-    word: "wissen",
-    translation: "to know; to be aware of"
-  },
-  {
-    word: "wollen",
-    translation: "to want"
-  },
-  {
-    word: "müssen",
-    translation: "must; to have to; to be obliged (to do sth.)"
-  },
-  {
     word: "machen",
     translation: "to make; to prepare (e.g. food); to do"
-  },
-  {
-    word: "tun",
-    translation: "to do; to do sth. to so."
   },
   {
     word: "sagen",
     translation: "to say; to tell"
   },
   {
-    word: "gehen",
-    translation: "to go; to leave; to work, to function (coll.)"
-  },
-  {
-    word: "sehen",
-    translation: "to see; to see (to sth.); to realise"
-  },
-  {
-    word: "geben",
-    translation: "to give"
-  },
-  {
-    word: "sollen",
-    translation: "should; to be asked (to do sth.); they say that"
-  },
-  {
     word: "meinen",
     translation: "to be of the opinion; to mean"
-  },
-  {
-    word: "kommen",
-    translation: "to come; to make it (e.g. over sth.); to go to; to occur"
-  },
-  {
-    word: "lassen",
-    translation: "to let; to stop (sth.)"
   },
   {
     word: "glauben",
@@ -81,24 +25,8 @@ const VERBS = [
     translation: "to speak; to talk"
   },
   {
-    word: "mögen",
-    translation: "to like; may; to be hesitant to do sth. (in negation with inf.)"
-  },
-  {
     word: "hören",
     translation: "to hear; to listen to"
-  },
-  {
-    word: "helfen",
-    translation: "to help (so.)"
-  },
-  {
-    word: "finden",
-    translation: "to find"
-  },
-  {
-    word: "bleiben",
-    translation: "to remain; to stay; to be (implying tardiness)"
   },
   {
     word: "brauchen",
@@ -113,40 +41,12 @@ const VERBS = [
     translation: "to bring; to take; to lead"
   },
   {
-    word: "stehen",
-    translation: "to stand; to be, to appear"
-  },
-  {
-    word: "heißen",
-    translation: "to be called; to mean"
-  },
-  {
-    word: "nehmen",
-    translation: "to take; to cause oneself to be (in some state)"
-  },
-  {
-    word: "sprechen",
-    translation: "to speak"
-  },
-  {
-    word: "sterben",
-    translation: "to die"
-  },
-  {
     word: "töten",
     translation: "to kill"
   },
   {
     word: "bekommen",
     translation: "to receive; to catch (e.g. a cold); to sit well with so."
-  },
-  {
-    word: "vergessen",
-    translation: "to forget; to leave (forget to take)"
-  },
-  {
-    word: "halten",
-    translation: "to hold; to stop; to support; to keep"
   },
   {
     word: "warten",
@@ -173,32 +73,12 @@ const VERBS = [
     translation: "to be true (usu. \"stimmt\"); to vote; to tune"
   },
   {
-    word: "verlieren",
-    translation: "to lose"
-  },
-  {
-    word: "dürfen",
-    translation: "to be allowed (to do sth.); may"
-  },
-  {
     word: "arbeiten",
     translation: "to work"
   },
   {
-    word: "essen",
-    translation: "to eat"
-  },
-  {
     word: "spielen",
     translation: "to play"
-  },
-  {
-    word: "liegen",
-    translation: "to lie; to be located"
-  },
-  {
-    word: "fahren",
-    translation: "to go (by vehicle); to leave; to drive"
   },
   {
     word: "versuchen",
@@ -221,20 +101,12 @@ const VERBS = [
     translation: "to determine"
   },
   {
-    word: "treffen",
-    translation: "to meet; to encounter"
-  },
-  {
     word: "hoffen",
     translation: "to hope"
   },
   {
     word: "suchen",
     translation: "to seek; to search"
-  },
-  {
-    word: "verlassen",
-    translation: "to leave; to trust with sth. (refl.); to pass away, to die"
   },
   {
     word: "zeigen",
@@ -249,28 +121,12 @@ const VERBS = [
     translation: "to fetch"
   },
   {
-    word: "gefallen",
-    translation: "to please; to appeal to"
-  },
-  {
     word: "retten",
     translation: "to save; to rescue"
   },
   {
-    word: "scheinen",
-    translation: "to seem; to shine"
-  },
-  {
-    word: "schlafen",
-    translation: "to sleep"
-  },
-  {
     word: "lernen",
     translation: "to learn; to study (revise/review materials); to train sth."
-  },
-  {
-    word: "trinken",
-    translation: "to drink"
   },
   {
     word: "schaffen",
@@ -280,10 +136,6 @@ const VERBS = [
     word: "funktionieren",
     translation: "to work, function"
   },
-  // {
-  //   word: "wehtun",
-  //   translation: "to hurt"
-  // },
   {
     word: "stellen",
     translation: "to pose (a question); to position; to put; to catch"
@@ -291,10 +143,6 @@ const VERBS = [
   {
     word: "nennen",
     translation: "to name; to mention"
-  },
-  {
-    word: "laufen",
-    translation: "to walk; to flow (of a fluid); to run (of an event)"
   },
   {
     word: "fühlen",
@@ -317,14 +165,6 @@ const VERBS = [
     translation: "to explain; to declare; to assert"
   },
   {
-    word: "sitzen",
-    translation: "to sit; to stay; to fit (of clothing)"
-  },
-  {
-    word: "tragen",
-    translation: "to carry; to hold; to wear (clothing)"
-  },
-  {
     word: "kaufen",
     translation: "to buy"
   },
@@ -343,14 +183,6 @@ const VERBS = [
   {
     word: "verletzen",
     translation: "to hurt, to injure; to violate (rules, laws, etc.)"
-  },
-  // {
-  //   word: "interessieren (für)",
-  //   translation: "to interest; to be interested in (refl. with für)"
-  // },
-  {
-    word: "ziehen",
-    translation: "to pull; to drag; to move"
   },
   {
     word: "anrufen",
@@ -381,14 +213,6 @@ const VERBS = [
     translation: "to begin (not \"beginnen\")"
   },
   {
-    word: "geschehen",
-    translation: "to occur; to happen"
-  },
-  {
-    word: "gewinnen",
-    translation: "to win"
-  },
-  {
     word: "klingen",
     translation: "to sound"
   },
@@ -401,16 +225,8 @@ const VERBS = [
     translation: "to use"
   },
   {
-    word: "fallen",
-    translation: "to fall; to fall in battle; to collapse"
-  },
-  {
     word: "schicken",
     translation: "to send"
-  },
-  {
-    word: "fliegen",
-    translation: "to fly"
   },
   {
     word: "erfahren",
@@ -421,20 +237,12 @@ const VERBS = [
     translation: "to pay"
   },
   {
-    word: "schreiben",
-    translation: "to write"
-  },
-  {
     word: "schätzen",
     translation: "to guess; to evaluate; to appreciate"
   },
   {
     word: "bitten",
     translation: "to ask, to request"
-  },
-  {
-    word: "lesen",
-    translation: "to read"
   },
   {
     word: "behalten",
@@ -469,10 +277,6 @@ const VERBS = [
     translation: "to fit; to suit"
   },
   {
-    word: "schlagen",
-    translation: "to hit; to defeat; to beat (cooking)"
-  },
-  {
     word: "verändern",
     translation: "to alter; to change"
   },
@@ -480,10 +284,6 @@ const VERBS = [
     word: "folgen",
     translation: "to follow"
   },
-  // {
-  //   word: "ansehen. sah an",
-  //   translation: "to look at"
-  // },
   {
     word: "zerstören",
     translation: "to destroy"
@@ -493,16 +293,8 @@ const VERBS = [
     translation: "to excuse; to apologise"
   },
   {
-    word: "schießen",
-    translation: "to shoot"
-  },
-  {
     word: "beschützen",
     translation: "to protect"
-  },
-  {
-    word: "stehlen",
-    translation: "to steal"
   },
   {
     word: "bewegen",
@@ -565,10 +357,6 @@ const VERBS = [
     translation: "to hide"
   },
   {
-    word: "fangen",
-    translation: "to catch"
-  },
-  {
     word: "beschäftigen",
     translation: "to concern oneself with sth. (usu. \"beschäftigt\")"
   },
@@ -624,25 +412,13 @@ const VERBS = [
     word: "beweisen",
     translation: "to prove"
   },
-  // {
-  //   word: "herausfinden",
-  //   translation: "to find sth. out"
-  // },
   {
     word: "fürchten",
     translation: "to fear; to be afraid"
   },
   {
-    word: "beginnen",
-    translation: "to begin (not \"anfangen\")"
-  },
-  {
     word: "überraschen",
     translation: "to surprise"
-  },
-  {
-    word: "singen",
-    translation: "to sing"
   },
   {
     word: "besorgen",
@@ -661,10 +437,6 @@ const VERBS = [
     translation: "to carry along; to pick up; to take away"
   },
   {
-    word: "rufen",
-    translation: "to call out; to telephone"
-  },
-  {
     word: "leisten",
     translation: "to perform; to afford (refl.)"
   },
@@ -675,14 +447,6 @@ const VERBS = [
   {
     word: "vermissen",
     translation: "to miss sth./so.; to have sth. missing"
-  },
-  {
-    word: "hängen",
-    translation: "to hang; to be fond of; depend on"
-  },
-  {
-    word: "werfen",
-    translation: "to throw"
   },
   {
     word: "überleben",
@@ -700,10 +464,6 @@ const VERBS = [
     word: "wohnen",
     translation: "to live, to reside, to dwell"
   },
-  // {
-  //   word: "schreiten",
-  //   translation: "to stride; to step; to proceed"
-  // },
   {
     word: "teilen",
     translation: "to split, to share; to divide"
@@ -744,10 +504,6 @@ const VERBS = [
     word: "verhaften",
     translation: "to detain, to take into custody"
   },
-  // {
-  //   word: "feieren",
-  //   translation: "to celebrate"
-  // },
   {
     word: "unterhalten",
     translation: "to maintain; to entertain; to converse (refl.)"
@@ -777,14 +533,6 @@ const VERBS = [
     translation: "to get drunk (refl.)"
   },
   {
-    word: "brechen",
-    translation: "to break"
-  },
-  // {
-  //   word: "antun",
-  //   translation: "to do sth.  to so.; to appeal to so."
-  // },
-  {
     word: "mitkommen",
     translation: "to come with so., to understand sth."
   },
@@ -795,10 +543,6 @@ const VERBS = [
   {
     word: "ermorden",
     translation: "to murder"
-  },
-  {
-    word: "leiden",
-    translation: "to bear, to endure, to suffer"
   },
   {
     word: "freuen",
@@ -821,10 +565,6 @@ const VERBS = [
     translation: "to notice"
   },
   {
-    word: "schließen",
-    translation: "to shut; to close; to lock; to conclude"
-  },
-  {
     word: "weinen",
     translation: "to weep, cry"
   },
@@ -839,10 +579,6 @@ const VERBS = [
   {
     word: "entdecken",
     translation: "to discover, to spot"
-  },
-  {
-    word: "treten",
-    translation: "to step; to read; to kick (a ball)"
   },
   {
     word: "lauten",
@@ -883,10 +619,6 @@ const VERBS = [
   {
     word: "zulassen",
     translation: "to allow; to license (for a car)"
-  },
-  {
-    word: "lügen",
-    translation: "to lie; to give false information (unintentionally)"
   },
   {
     word: "verlangen",
@@ -949,10 +681,6 @@ const VERBS = [
     translation: "to stop"
   },
   {
-    word: "schreien",
-    translation: "to shout; to yell; to scream"
-  },
-  {
     word: "klauen",
     translation: "to steal"
   },
@@ -1005,14 +733,6 @@ const VERBS = [
     translation: "to join, to connect; to bandage"
   },
   {
-    word: "springen",
-    translation: "to spring; to jump"
-  },
-  {
-    word: "fliehen",
-    translation: "to flee; to diverge"
-  },
-  {
     word: "aufnehmen",
     translation: "to pick up; to receive; to take in; to record"
   },
@@ -1039,10 +759,6 @@ const VERBS = [
   {
     word: "existieren",
     translation: "to exist"
-  },
-  {
-    word: "unternehmen",
-    translation: "to undertake"
   },
   {
     word: "befinden",
@@ -1073,20 +789,12 @@ const VERBS = [
     translation: "to watch, to observe"
   },
   {
-    word: "raten",
-    translation: "to advise; to recommend; to guess"
-  },
-  {
     word: "geraten",
     translation: "to turn out, succed; to thrive"
   },
   {
     word: "besprechen",
     translation: "to discuss"
-  },
-  {
-    word: "verbieten",
-    translation: "to forbid, to prohibit (with dative)"
   },
   {
     word: "angehen",
@@ -1117,16 +825,8 @@ const VERBS = [
     translation: "to disappoint"
   },
   {
-    word: "schwimmen",
-    translation: "to swim; to float"
-  },
-  {
     word: "ergeben",
     translation: "to produce; to surrender (refl.); to arise, result, turn out"
-  },
-  {
-    word: "bieten",
-    translation: "to offer; to bid; to arrise, to occur (of an opportunity) (refl.)"
   },
   {
     word: "schmecken",
@@ -1185,10 +885,6 @@ const VERBS = [
     translation: "to accept"
   },
   {
-    word: "steigen",
-    translation: "to ascend; to climb; to rise"
-  },
-  {
     word: "stammen",
     translation: "to descend, originate, be derived"
   },
@@ -1200,6 +896,6 @@ const VERBS = [
     word: "begegnen",
     translation: "to meet, encounter (with dative)"
   }
-];
+]
 
-module.exports = VERBS;
+export default VERBS.map(v => ({ ...v, type: "regular" }));
