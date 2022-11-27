@@ -41,7 +41,15 @@ type ConjugationProps = {
   conjugation: { [key: string]: string };
 };
 
-const generateOptions = function ({ correct, conjugation }: ConjugationProps) {
+type GenerateOptionsArgs = {
+  correct: string;
+  conjugation: { [key: string]: string };
+};
+
+const generateOptions = function ({
+  correct,
+  conjugation,
+}: GenerateOptionsArgs) {
   const options = new Set(Object.values(conjugation));
 
   const opts = sampleSize(Array.from(options), 3);
@@ -55,42 +63,72 @@ const generateOptions = function ({ correct, conjugation }: ConjugationProps) {
 
 function Conjugation(props: ConjugationProps) {
   const { type, correct, conjugation } = props;
-  let options = useMemo(() => generateOptions(props), [props]);
-  let pronoun = useMemo(() => sample(PRONOUNS[type]), [type]);
+  let options = useMemo(
+    () => generateOptions({ correct, conjugation }),
+    [correct, conjugation]
+  );
+  let pronoun = useMemo(() => sample<string>(PRONOUNS[type]), [type]);
 
   let [answer, setAnswer] = useState<string>();
 
+  return (
+    <Tain
+      question={pronoun}
+      answers={options}
+      onSelect={setAnswer}
+      correctAnswer={correct}
+      userAnswer={answer}
+    />
+  );
+}
+
+type TainProps = {
+  onSelect: React.Dispatch<React.SetStateAction<string | undefined>>; // I am sure that here no case when undefined
+  question: string | undefined; // I want only strng. I know that there is only string. How to do that?
+  answers: string[];
+  correctAnswer: string;
+  userAnswer?: string;
+};
+
+function Tain({
+  onSelect,
+  question,
+  answers,
+  correctAnswer,
+  userAnswer,
+}: TainProps) {
   let getColorScheme = function (current: string) {
-    if (!answer) return "gray";
+    if (!userAnswer) return "gray";
 
-    if (correct === current) return "green";
+    if (correctAnswer === current) return "green";
 
-    if (answer === current) return "red";
+    if (userAnswer === current) return "red";
 
     return "gray";
   };
 
   return (
     <Flex w="full" justifyContent="space-between">
-      <Box>{pronoun}</Box>
-      <Box>
-        <ButtonGroup>
-          {options.map((option) => (
-            <Button
-              key={option}
-              size="sm"
-              variant="outline"
-              colorScheme={getColorScheme(option)}
-              minW="14"
-              onClick={() => {
-                setAnswer(option);
-              }}
-            >
-              {option}
-            </Button>
-          ))}
-        </ButtonGroup>
-      </Box>
+      <Box>{question}</Box>
+      <ButtonGroup>
+        {answers.map((answer) => (
+          <Button
+            key={answer}
+            size="sm"
+            variant={userAnswer === answer ? "solid" : "outline"}
+            colorScheme={getColorScheme(answer)}
+            minW="14"
+            onClick={userAnswer ? undefined : () => onSelect(answer)}
+            opacity={
+              userAnswer && userAnswer != answer && answer != correctAnswer
+                ? 0.3
+                : 1
+            }
+          >
+            {answer}
+          </Button>
+        ))}
+      </ButtonGroup>
     </Flex>
   );
 }
