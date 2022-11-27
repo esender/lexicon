@@ -37,27 +37,25 @@ const PRONOUNS = {
 type ConjugationProps = {
   type: "s1" | "s2" | "s3" | "p1" | "p2" | "p3";
   correct: string;
-  stem: string;
+  word: string;
+  conjugation: { [key: string]: string };
 };
 
-const availableEndings = ["en", "st", "t", "e", "et", "est"] as const;
+const generateOptions = function ({ correct, conjugation }: ConjugationProps) {
+  const options = new Set(Object.values(conjugation));
 
-const getExtraEndings = function (ending: string): string[] {
-  const endings = sampleSize<string>(availableEndings, 3);
+  const opts = sampleSize(Array.from(options), 3);
 
-  if (!endings.includes(ending)) {
-    endings[0] = ending;
+  if (!opts.includes(correct)) {
+    opts[0] = correct;
   }
 
-  return endings;
+  return shuffle(opts);
 };
 
-function Conjugation({ type, correct, stem }: ConjugationProps) {
-  let correctEnding = correct.substr(stem.length);
-  let endings = useMemo(
-    () => shuffle(getExtraEndings(correctEnding)),
-    [correctEnding]
-  );
+function Conjugation(props: ConjugationProps) {
+  const { type, correct, conjugation } = props;
+  let options = useMemo(() => generateOptions(props), [props]);
   let pronoun = useMemo(() => sample(PRONOUNS[type]), [type]);
 
   let [answer, setAnswer] = useState<string>();
@@ -77,18 +75,18 @@ function Conjugation({ type, correct, stem }: ConjugationProps) {
       <Box>{pronoun}</Box>
       <Box>
         <ButtonGroup>
-          {endings.map((end) => (
+          {options.map((option) => (
             <Button
-              key={end}
+              key={option}
               size="sm"
               variant="outline"
-              colorScheme={getColorScheme(stem + end)}
+              colorScheme={getColorScheme(option)}
               minW="14"
               onClick={() => {
-                setAnswer(stem + end);
+                setAnswer(option);
               }}
             >
-              {stem + end}
+              {option}
             </Button>
           ))}
         </ButtonGroup>
@@ -108,7 +106,7 @@ function ConjugationTrainer({ word }: ConjugationTrainerProps) {
     <Box textAlign="center">
       <Box mb={2}>
         <Skeleton isLoaded={isSuccess} display="inline-block" minW={200}>
-          <Heading>{wordInfo?.infinitive ?? "something"}</Heading>
+          <Heading>{wordInfo?.word ?? "something"}</Heading>
         </Skeleton>
       </Box>
       <Skeleton isLoaded={isSuccess} display="inline-block" minW={200}>
@@ -121,14 +119,15 @@ function ConjugationTrainer({ word }: ConjugationTrainerProps) {
       <Box maxW="500" m={"auto"}>
         <Stack direction="column">
           {isSuccess
-            ? (Object.entries(wordInfo.conjugations) as [conjs, string][]).map(
+            ? (Object.entries(wordInfo.conjugation) as [conjs, string][]).map(
                 ([key, value]) => {
                   return (
                     <Conjugation
                       key={key + word}
                       type={key}
                       correct={value}
-                      stem={wordInfo.stem}
+                      conjugation={wordInfo.conjugation}
+                      word={word}
                     />
                   );
                 }
@@ -143,7 +142,7 @@ function ConjugationTrainer({ word }: ConjugationTrainerProps) {
 }
 
 type Verb = {
-  infinitive: string;
+  word: string;
   type: "regular" | "irregular";
 };
 
@@ -184,7 +183,7 @@ const Trainer: React.FC<TrainerProps> = function ({ verbs }) {
         </Stack>
       </CheckboxGroup>
 
-      {verb && <ConjugationTrainer word={verb.infinitive} />}
+      {verb && <ConjugationTrainer word={verb.word} />}
       <Button onClick={resetVerb}>Random Word</Button>
     </div>
   );
